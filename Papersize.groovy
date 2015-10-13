@@ -1,7 +1,7 @@
 class PaperSize {
 
-	double width;
-	double length;
+	int width;
+	int length;
 	
 	//Method tests in which direction from base A0 recursion should proceed.
 	void paperdims(String s){
@@ -21,7 +21,7 @@ class PaperSize {
 			this.length = 1189;
 		} else {
 			smallerA0(i-1)
-			double temp = this.width;
+			int temp = this.width;
 			this.width = this.length / 2;
 			this.length = temp;
 		}
@@ -33,7 +33,7 @@ class PaperSize {
 			this.length = 1189;
 		} else {
 			largerA0(s.substring(1));
-			double temp = this.width;
+			int temp = this.width;
 			this.width = this.length * 2;
 			this.length = temp;
 		}
